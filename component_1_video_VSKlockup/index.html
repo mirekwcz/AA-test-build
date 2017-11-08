@@ -18,13 +18,17 @@
     <body>
         <h1>Heading</h1>
         <h2>Subheading</h2>
+        <!-- one can also use this syntax: <img src="media_files/poster_image.jpg" alt="Image of an animal" style="width: 500px; height: 600px;"> The alt attribute is required. A web page will not validate correctly without it. -->
+        <img class="web_page_content_attributes" src="media_files/poster_image.jpg" alt="Image of an animal" height=100%>
         <!-- HTML5’s more relaxed syntax — you don’t have to put quotes around attribute values, and you can use simple boolean attributes such as autoplay as single words. -->
         <!-- If you prefer, you can of course also stick to the XHTML syntax controls="controls" and quote all your attribute values. -->
         <!-- <video src=cat.mp4 width=320 height=240 controls poster=image.jpg> </video> -->
-        <video width=320 height=240 controls poster=media_files/cat.jpg>
+        <video class="web_page_content_attributes" height=100% controls poster=media_files/poster_image.jpg>
+            <!-- poster_image.jpg size in pixels: 3652 × 2430 -->
 	           <!-- <source src=myVideo.webm type=video.webm>-->
 	           <source src=media_files/cat.mp4 type=video/mp4>
 	           <!-- Download video in <a href=myVideo.webm>WebM</a> or <a href=myVideo.mp4>MP4</a> format -->
+               Your browser does not support the video tag.
         </video>
     </body>
 </html>
