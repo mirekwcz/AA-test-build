@@ -1,52 +1,42 @@
-/*jslint node: true */
-"use strict";
-/*if (!process.env.BROWSER) {
-    global.window = {};
-}*/
+/*window.addEventListener("load", Init); */
+window.onload = function () {Init();}
 
-function init() {
-    var heart = document.getElementsByClassName('heart')[1],
-        pfx = ["webkit", "moz", "MS", "o", ""],
-        hovered = false;   
-    PrefixedEvent(heart, "AnimationIteration", AnimationListener);
-    heart.onmouseover = function () {
-        hovered = true;
-    }
+function Init() {
+    body_wrapper = document.getElementById("body-wrapper");
+    refText_1 = document.getElementById("text-on-img");
+    pfx = ["webkit", "moz", "MS", "o", ""];
+    // animation listener events
+    PrefixedEvent(body_wrapper, "AnimationEnd", AnimationListener);
 
-    heart.onmouseout = function () {
-        setTimeout(function () { hovered = false; }, 500);
-        PrefixedEvent(heart, "TransitionEnd", TransitionListener);
-        heart.style.webkitTransform = 'scale(1)';
-        heart.style.MozTransform = 'scale(1)';
-        heart.style.msTransform = 'scale(1)';
-        heart.style.OTransform = 'scale(1)';
-        heart.style.transform = 'scale(1)';
-    }
+   // op = 0.0;
+   // text_obj = document.getElementById("text-on-img");
+   //	text_obj.style.opacity = op;
+   //	id = setInterval(frame, 50); 
 }
 
-function AnimationListener() {
-    if (hovered) {
-        heart.classList.remove('animated');
-        heart.style.webkitTransform = 'scale(2)';
-        heart.style.MozTransform = 'scale(2)';
-        heart.style.msTransform = 'scale(2)';
-        heart.style.OTransform = 'scale(2)';
-        heart.style.transform = 'scale(2)';
-    }
-}
-
-function TransitionListener() {
-    if (!hovered) {
-        heart.classList.add('animated');
-    }
-}
-
+//apply prefixed event handlers
 function PrefixedEvent(element, type, callback) {
-    var p = 0;
-    for (p = 0; p < pfx.length; p = p + 1) {
-        if (!pfx[p]) {
-            type = type.toLowerCase();
-        }
+    for (var p = 0; p < pfx.length; p++) {
+        if (!pfx[p]) type = type.toLowerCase();
         element.addEventListener(pfx[p] + type, callback, false);
+    }
+}
+
+//handle animation events
+function AnimationListener(e) {
+    AnimateText_1();
+}
+
+function AnimateText_1() {
+    refText_1.classList.add("fadeInTxt");
+}
+
+function frame() {
+    if (op > 1.0) {
+        clearInterval(id);
+        text_obj.style.opacity = 1.0;
+    } else {
+        op = op + 0.01;
+        text_obj.style.opacity = op;
     }
 }

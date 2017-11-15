@@ -1,53 +1,22 @@
 <!DOCTYPE html>
 <!--find out about the attributes here: <html itemscope="" itemtype="http://schema.org/WebPage" lang="en"> -->
-<html>
-
-    <head>
-        <meta charset="utf-8"> <!-- In HTML the <meta> tag has no end tag. In XHTML the <meta> tag must be properly closed. -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="BREAKING investigations by Animals International / Animals Australia reveals shocking cruelty that must be stopped. SIGN NOW."/>
-        <meta name="keywords" content="live export, investigation, worldwide, global, Animals Australia, Animals International, Europe, Meat industry, cruelty, campaign, take action, expose, petition"/>
-        <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1">
-        
-        <link rel="image_src" href="https://www.animalsinternational.org/take_action/live-export-global/_theme/img/fbshare2.jpg"> <!-- The <link> tag defines a link between a document and an external resource. The <link> tag is used to link to external style sheets. -->
-        <link rel="stylesheet" href="css/main.css"> <!-- The <link> element is an empty element, it contains attributes only. This element goes only in the head section, but it can appear any number of times. -->
-        <!-- In HTML the <link> tag has no end tag. In XHTML the <link> tag must be properly closed. -->
+    <html>
+        <head>
+            <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1">       
+        <link rel="stylesheet" href="css/style.css"> <!-- The <link> element is an empty element, it contains attributes only. This element goes only in the head section, but it can appear any number of times. -->
+        <script type="text/javascript" src="js/script.js"></script>
         <title>Stop the cruel global trade that's doing this to animals</title>
-        
-  <!--  <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.0.js"></script>  -->
- <!--  <script type="text/javascript" src="js/script.js"></script>  -->
-    
-    </head>
-    
+   
+    </head>    
+    <div id="body-wrapper" class="fade-in">
     <body>
-        <h3>Pure CSS</h3>
-        
-   <!--     <script>
-            var heart = null;
-            window.onload = init;
-        </script>  -->
-        
-       <!-- <div class="heart animated"></div> -->
-        <div class="web_page_content_attributes video_and_lower_header_container">
-                    <div class="heart animated css play_button"></div>
-            <video controls class="web_page_content_attributes border" poster=media_files/poster_image_9.jpg height=100% >
-                <!-- poster_image_3.jpg size: 3506x1972 => aspect ratio: 1.77789 -->
-                <!-- <source src=myVideo.webm type=video.webm>-->
-                <source src=media_files/cat.mp4 type=video/mp4> <!-- current dimension of the video is 640x360 => aspect ratio: 1.77777 -->
-                <!-- Download video in <a href=myVideo.webm>WebM</a> or <a href=myVideo.mp4>MP4</a> format -->
-                Your browser does not support the video tag.
-            </video>
-            <div class="bottom_header web_page_content_attributes">
-                This is lower header.
-            </div> 
-        </div>
-        <!-- one can also use this syntax: <img src="media_files/poster_image.jpg" alt="Image of an animal" style="width: 500px; height: 600px;"> The alt attribute is required. A web page will not validate correctly without it. -->
-        <img class="web_page_content_attributes border" src="media_files/poster_image_7.jpg" alt="Image of an animal" height=100%>
-        <!-- HTML5’s more relaxed syntax — you don’t have to put quotes around attribute values, and you can use simple boolean attributes such as autoplay as single words. -->
-        <!-- If you prefer, you can of course also stick to the XHTML syntax controls="controls" and quote all your attribute values. -->   
-        <!-- <video src=cat.mp4 width=320 height=240 controls poster=image.jpg> </video> -->
-        <div class="bottom_header web_page_content_attributes">
-            This is lower header.
+        <div class="img-container">
+            <img id="img-attr" src="media_files/poster_image_2.jpg" alt="Image of an animal">
+            <div id="text-on-img" class="animated-txt">
+                See the World Through Her Eyes
+            </div>
         </div>
     </body>
+    </div>
 </html>

@@ -1,0 +1,197 @@
+html {
+    background-color: black;
+}
+
+@keyframes fadeIn
+  to { 
+     opacity: 1; }
+
+.fade-in {
+  animation: fadeIn 1.0s ease forwards;
+  /*[other div properties can be included here] */
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease-in 4s;
+  -webkit-animation: fadeIn ease-in 4s;
+  -moz-animation: fadeIn ease-in 4s;
+  -o-animation: fadeIn ease-in 4s;
+  -ms-animation: fadeIn ease-in 4s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#img-attr {
+    width: 100%;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+}
+
+.animated-txt { 
+    position: absolute; 
+    top: 200px; 
+    left: 100px; 
+    width: 100%;
+    font-size: 30px;
+    opacity: 0;
+
+    transform: scale(1, 1);
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+ /*   animation-duration: 5s;
+    animation-name: fadeAndScale;
+    animation-timing-function: cubic-bezier(.71,.55,.62,1.57);  */
+}
+
+
+@-webkit-keyframes fadeInTxt {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    0% {transform: scale(0.1);}
+    100% {transform: scale(1);}
+}
+			          
+@keyframes fadeInTxt {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    0% {transform: scale(0.1);}
+    100% {transform: scale(1);}
+}
+          
+.fadeInTxt {
+    -webkit-animation-name: fadeInTxt;
+    animation-name: fadeInTxt;
+}
+/*
+@keyframes fadeAndScale {
+    from {
+            opacity: 0;
+            transform: scale(0.2, 0.2);
+    }
+    to {
+            opacity: 1;
+            transform: scale(1, 1);
+    }
+}
+
+.animate-txt-1 {
+    animation-duration: 5s;
+        animation-name: fadeAndScale;
+	     animation-timing-function: cubic-bezier(.71,.55,.62,1.57); 
+
+	    animation-timing-function: ease-in-out; 
+  animation: fadeInTxt_1 ease 5s;
+  -webkit-animation: fadeInTxt_1 ease 5s;
+  -moz-animation: fadeInTxt_1 ease 5s;
+  -o-animation: fadeInTxt_1 ease 5s;
+  -ms-animation: fadeInTxt_1 ease 5s; 
+}
+
+@keyframes fadeInTxt_1
+  to { 
+     opacity: 1; }
+
+.animate-txt-1 {
+  animation: fadeInTxt_1 1.0s ease forwards;
+  /*[other div properties can be included here] 
+
+
+@keyframes fadeInTxt_1{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeInTxt_1 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeInTxt_1 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeInTxt_1 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeInTxt_1 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+*/
+
