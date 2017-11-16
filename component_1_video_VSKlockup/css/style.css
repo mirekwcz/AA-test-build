@@ -146,7 +146,7 @@ html {
 
 .animate-txt-1 {
   animation: fadeInTxt_1 1.0s ease forwards;
-  /*[other div properties can be included here] 
+  [other div properties can be included here] */
 
 
 @keyframes fadeInTxt_1{
