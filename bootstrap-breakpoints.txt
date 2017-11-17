@@ -1,0 +1,43 @@
+The Bootstrap grid system has four classes:
+
+    xs (for phones - screens less than 768px wide)
+    sm (for tablets - screens equal to or greater than 768px wide)
+    md (for small laptops - screens equal to or greater than 992px wide)
+    lg (for laptops and desktops - screens equal to or greater than 1200px wide)
+
+
+/********** sm - small devices (for screen width between 768 and 991px) **********/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/********** md - medium devices (for screen width between 992 and 1199px) **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+
+/********** lg - Large devices (for screens equal to or greater than 1200px wide) **********/
+@media (min-width: 1200px) {
+ 
+}
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+   
+}
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
