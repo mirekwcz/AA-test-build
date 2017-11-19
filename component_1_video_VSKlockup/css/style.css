@@ -1,15 +1,17 @@
+/*----- Global attributes -----
+ */
 * {
     margin: 0;
     padding: 0;
     border: 0;
 }
-
 html {
     background-color: black;
 }
-
-/* ----------------------- */
-/* fade in body element */
+/* .fade-in-body class wrappes around the <body> element and
+ * is used exclusively to create a fade-in effect 
+ * during initial access of the web page. 
+ */
 .fade-in-body {
   animation: fadeInBody ease-in 4s;
   -webkit-animation: fadeInBody ease-in 4s;
@@ -17,7 +19,6 @@ html {
   -o-animation: fadeInBody ease-in 4s;
   -ms-animation: fadeInBody ease-in 4s;
 }
-
 @keyframes fadeInBody {
   0% {
     opacity:0;
@@ -26,7 +27,6 @@ html {
     opacity:1;
   }
 }  
-
 @-moz-keyframes fadeInBody {
   0% {
     opacity:0;
@@ -44,7 +44,6 @@ html {
     opacity:1;
   }
 }
-
 @-o-keyframes fadeInBody {
   0% {
     opacity:0;
@@ -53,7 +52,6 @@ html {
     opacity:1;
   }
 }
-
 @-ms-keyframes fadeInBody {
   0% {
     opacity:0;
@@ -62,109 +60,160 @@ html {
     opacity:1;
   }
 }
-
-/* ----------------------- */
+/* ---------------------------------------------------------
+ * #content-wrapper ID contribute creates a container for <div> object
+ * with the following IDs: #poster-img,  #animated-txt (See the world through
+ * her eyes), #animated-txt-2 (then change it), #animated-img-2 (VSK),
+ * #animated-video (<div>) provides a container for a video element.
+ */
 #content-wrapper {
     position: relative;
 }
+/* .content-attribs class provides styling properties for <div> element
+ * residing inside the #content-wrapper object.
+ */
 .content-attribs {
     display: block;
-    width: 1650px;  /*final max_widht should be 1650px */
+    width: 100%;  /*final max_widht should be 1650px */
     margin: auto;
     height: auto; 
 }
-
+/* the .border class is applied only to the #content-wrapper object
+ */
 .border {
     border: 2px solid black;
     padding: 0;
 }
-
-/*** default: xs - extra small devices, ie. mobile phones (for screens less than 768px wide) ***/
-/*** sm - small devices, such as tablets (for screen width between 768 and 991px) ***/
+/* media queries for:
+ * 1. default: xs - extra small viewport, ie. mobile phones (for screens less than 768px wide)
+ * 2. sm - small devices, such as tables (for screen width between 768 and 991px)
+ */
 @media (min-width: 768px) and (max-width: 991px) {
 }
-
-/*** md - medium devices, ie. small laptops (for screen width between 992 and 1199px) ***/
+/* md - medium devices, ie. small laptops (for screen width between 992 and 1199px)
+ */
 @media (min-width: 992px) and (max-width: 1199px) {
 }
-
-/*** lg - Large devices, ie. laptops and desktops (for screens equal to or greater than 1200px wide) ***/
+/* lg - Large devices, ie. laptops and desktops (for screens equal to or greater than 1200px wide)
+ */
 @media (min-width: 1200px) {
-	 
 }
-
 /* Large screen	desktop	content	should extend no wider than 1650px.
- * After this point the	content	column should be centred on a white background. */
-@media (max-width: 1650px) { 
+ * After this point the	content	column should be centred on a white background.
+ */
+@media (min-width: 1651px) { 
     .content-attribs {
-        width: 100%
+        width: 1650px; 
+    }
+    #animated-txt {
+	top: 264px;
+	font-size: 66px;
+	border-radius: 82.5px;
     }
 }
-
+/*-------------------------------------------------
+ * #poster-img attribute identifies an image, that
+ * is displayed/used as a poster for a video element
+ */
 #poster-img {
-    position: absolute;
+    position: relative;
 }
-
-/* ----------------------- */
+/* animated text: "See the world through her eyes."
+ */
 #animated-txt {
-    width: 100%;
+    width: 54.2vw;
+    max-width: 894.3px;
     position: absolute; 
-    top: 100px;
-    left: 30px; 
-    width: 100%;
-    font-size: 30px;
+    top: 16vw;
+    left: 0;
+    font-size: 4vw; 
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5vw; 
+ /*   -webkit-filter: blur(10px); /* Chrome, Opera, etc. */
+ /*   background-color: transparent;
+    box-shadow: 0px 0px 90px black; */
+/*    background-image: url(black.png);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: repeat;
+    background: black;  */
+    /*background: rgba(204, 204, 204, 0.5)*/
+    /*background: linear-gradient( to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
     opacity: 0;
-
     transform: scale(1, 1);
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-  /*   animation-duration: 5s;
-    animation-name: fadeAndScale;
-    animation-timing-function: cubic-bezier(.71,.55,.62,1.57);  */
-}   
-
+    z-index: 10;
+} 
+/* text #2: "Then change it."
+ */ 
+#animated-txt-2 {
+    width: 55vw;
+    max-width: 907.5px;
+    position: absolute; 
+    top: 23vw;
+    left: 0;
+    font-size: 4vw;
+    color: orange;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    padding-left: 20px;
+    padding-right: 0;
+    border-radius: 15vw;
+    /*background: rgba(204, 204, 204, 0.5)*/
+    /*background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+    opacity: 0;
+    transform: scale(1, 1);
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    z-index: 1;
+}
+  
+/* This class is exclusively used to animate (fade in) the text:
+ * "See the world through her eyes."
+ */
 .fade-in-txt {
     -webkit-animation-name: fadeInTxt;
     animation-name: fadeInTxt;
 }
-
 @-webkit-keyframes fadeInTxt {
     0% {opacity: 0;}
     100% {opacity: 1;}
     0% {transform: scale(0.1);}
     100% {transform: scale(1);}
 }
-			          
 @keyframes fadeInTxt {
     0% {opacity: 0;}
     100% {opacity: 1;}
     0% {transform: scale(0.1);}
     100% {transform: scale(1);}
 }
-
 @-moz-keyframes fadeInTxt {
     0% {opacity: 0;}
     100% {opacity: 1;}
     0% {transform: scale(0.1);}
     100% {transform: scale(1);}
 }
-
 @-webkit-keyframes fadeInTxt {
     0% {opacity: 0;}
     100% {opacity: 1;}
     0% {transform: scale(0.1);}
     100% {transform: scale(1);}
 }
-
 @-o-keyframes fadeInTxt {
     0% {opacity: 0;}
     100% {opacity: 1;}
     0% {transform: scale(0.1);}
     100% {transform: scale(1);}
 }
-
 @-ms-keyframes fadeInTxt {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -172,21 +221,31 @@ html {
     100% {transform: scale(1);}
 }
 
-/* ----------------------- */
+
 #animated-img-2 {
 }
+/* animation of the 2nd text
+ */
+
+
+.txt-background {
+    background: black; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(204, 204, 204, 0.5), rgba(0, 0, 0, 1), rgba(204, 204, 204, 0.5)); /* For Safari */
+    background: -o-linear-gradient(rgba(204, 204, 204, 0.5), rgba(0, 0, 0, 1), rgba(204, 204, 204, 0.5)); /* For Opera */
+    background: -moz-linear-gradient(rgba(204, 204, 204, 0.5), rgba(0, 0, 0, 1), rgba(204, 204, 204, 0.5)); /* For Firefox */
+    background: linear-gradient(rgba(204, 204, 204, 0), rgba(0, 0, 0, 1), rgba(204, 204, 204, 0)); /* Standard syntax */
+}
+
+
 
 .img2-content-attribs {
     visibility: hidden;
     position: absolute;
-    /*top: 150px;
-    left: 300px;*/
-    margin-top: 15%;
-    margin-left: 40%;
     width: 50%;
-    z-index: 10;
+    top: 5.5vw;
+    left: 27vw;
+    z-index: 1;
 }
-
 .fade-in-img2 {
   visibility: visible;
   position: absolute;
@@ -196,7 +255,6 @@ html {
   -o-animation: fadeInImg2 ease-in 4s;
   -ms-animation: fadeInImg2 ease-in 4s;
 }
-
 @keyframes fadeInImg2 {
   0% {
     opacity:0;
@@ -205,7 +263,6 @@ html {
     opacity:1;
   }
 }  
-
 @-moz-keyframes fadeInImg2 {
   0% {
     opacity:0;
@@ -214,7 +271,6 @@ html {
     opacity:1;
   }
 }
-
 @-webkit-keyframes fadeInImg2 {
   0% {
     opacity:0;
@@ -223,7 +279,6 @@ html {
     opacity:1;
   }
 }
-
 @-o-keyframes fadeInImg2 {
   0% {
     opacity:0;
@@ -232,7 +287,6 @@ html {
     opacity:1;
   }
 }
-
 @-ms-keyframes fadeInImg2 {
   0% {
     opacity:0;
@@ -241,14 +295,16 @@ html {
     opacity:1;
   }
 }
-
-/* ----------------------- */
+/* ---------------------------------
+ * This ID attribute points to the <video> element
+ */
 #animated-video {
     visibility: hidden;
     position: absolute;
     z-index: 100;
 }
-
+/* Enables animation of the <video> element
+ */
 .fade-in-video {
   animation: fadeInVideo ease-in 4s;
   -webkit-animation: fadeInVideo ease-in 4s;
@@ -256,7 +312,6 @@ html {
   -o-animation: fadeInVideo ease-in 4s;
   -ms-animation: fadeInVideo ease-in 4s;
 }
-
 @keyframes fadeInVideo {
   0% {
     opacity:0;
@@ -265,7 +320,6 @@ html {
     opacity:1;
   }
 }  
-
 @-moz-keyframes fadeInVideo {
   0% {
     opacity:0;
@@ -274,7 +328,6 @@ html {
     opacity:1;
   }
 }
-
 @-webkit-keyframes fadeInVideo {
   0% {
     opacity:0;
@@ -283,7 +336,6 @@ html {
     opacity:1;
   }
 }
-
 @-o-keyframes fadeInVideo {
   0% {
     opacity:0;
@@ -292,7 +344,6 @@ html {
     opacity:1;
   }
 }
-
 @-ms-keyframes fadeInVideo {
   0% {
     opacity:0;
@@ -301,5 +352,35 @@ html {
     opacity:1;
   }
 }
-
-
+/*footnote (<div> element)
+ * this is a container for text: "1 in 3 Australians are cutting out or ..."
+ * and the "GET YOUR FREE STARTER KIT" button
+ */
+#footnote {
+    background-color: orange;
+    height: 10vw; 
+    position: relative;
+}
+#footnote p {
+    color: white;
+    position: relative;
+    font-size: 2.5vw;
+    width: 35vw;
+    top: 20%;
+    left: 2%;
+    text-align: center;
+    background-color: red;
+}
+#footnote button {
+    display: block;
+    width: 14vw;
+    height: 4.5vw;
+    float: right;
+    float: bottom;
+    font-size: 1.25vw;
+    margin-top: 2.8%;
+    margin-right: 4vw;
+    color: yellow; 
+    background-color: darkblue;
+    border-radius: 1vw; 
+}
