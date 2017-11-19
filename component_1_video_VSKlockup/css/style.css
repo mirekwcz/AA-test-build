@@ -173,7 +173,7 @@ html {
 /* text #2: "Then change it."
  */ 
 #animated-txt-2 {
-    width: 55vw;
+    width: 27vw;
     max-width: 907.5px;
     position: absolute; 
     top: 23vw;
@@ -265,7 +265,7 @@ html {
 }
 .fade-in-img2 {
   visibility: visible;
-  position: absolute;
+/*  position: absolute; */
   animation: fadeInImg2 ease-in 4s;
   -webkit-animation: fadeInImg2 ease-in 4s;
   -moz-animation: fadeInImg2 ease-in 4s;
@@ -378,6 +378,8 @@ html {
     height: 10vw;
     max-height: 165px;
     position: relative;
+    visibility: visible;
+    opacity: 0;
 }
 #footnote p {
     color: black;
@@ -404,3 +406,86 @@ html {
     background-color: darkblue;
     border-radius: 1vw; 
 }
+
+
+.fade-in-footnote {
+  visibility: visible;
+/*  position: absolute; */
+  animation: fadeInFootnote ease-in 4s;
+  -webkit-animation: fadeInFootnote ease-in 4s;
+  -moz-animation: fadeInFootnote ease-in 4s;
+  -o-animation: fadeInFootnote ease-in 4s;
+  -ms-animation: fadeInFootnote ease-in 4s;
+}
+@keyframes fadeInFootnote {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}  
+@-moz-keyframes fadeInFootnote {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadeInFootnote {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-o-keyframes fadeInFootnote {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-ms-keyframes fadeInFootnote {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+/* ---------------------------------
+ */
+ .move-vsk-down {
+  animation: moveVskDown ease-in 1s forwards;
+  -webkit-animation: moveVskDown ease-in 1s forwards;
+  -moz-animation: moveVskDown ease-in 1s forwards;
+  -o-animation: moveVskDown ease-in 1s forwards;
+  -ms-animation: moveVskDown ease-in 1s forwards;
+}
+@keyframes moveVskDown {
+    0% { top: 5.5vw; left: 27vw; }
+  100% { top: 35vw; left: 35vw;  }
+}  
+@-moz-keyframes moveVskDown {
+    0% { top: 5.5vw; left: 27vw; }
+  100% { top: 35vw; left: 35vw;  }
+}
+}
+@-webkit-keyframes moveVskDown {
+    0% { top: 5.5vw; left: 27vw; }
+  100% { top: 35vw; left: 35vw;  }
+}
+@-o-keyframes moveVskDown {
+    0% { top: 5.5vw; left: 27vw; }
+  100% { top: 35vw; left: 35vw;  }
+}
+@-ms-keyframes moveVskDown {
+    0% { top: 5.5vw; left: 27vw; }
+  100% { top: 35vw; left: 35vw;  }
+}
+/* ---------------------------------
+

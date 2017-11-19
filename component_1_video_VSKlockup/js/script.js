@@ -10,12 +10,14 @@ function Init() {
     globals.animated_txt_2 = document.getElementById("animated-txt-2");
     globals.animated_img_2 = document.getElementById("animated-img-2");
     globals.animated_video = document.getElementById("animated-video");
+    globals.footnote = document.getElementById("footnote");
     pfx = ["webkit", "moz", "MS", "o", ""];
     // animation listener events
     prefixed_event(globals.body_wrapper, "AnimationEnd", body_wrapper_ev_handler);
     prefixed_event(globals.animated_txt, "AnimationEnd", anim_txt_ev_handler);
     prefixed_event(globals.animated_txt_2, "AnimationEnd", anim_txt_2_ev_handler);
     prefixed_event(globals.animated_img_2, "AnimationEnd", anim_img_2_ev_handler);
+    prefixed_event(globals.footnote, "AnimationEnd", footnote_ev_handler);
 }
 
 //apply prefixed event handlers
@@ -32,8 +34,14 @@ function body_wrapper_ev_handler(e) {
 }
 
 function anim_txt_ev_handler (e) {
-    display_img_2 ();  // display an image of VSK (vegan starter kit) with text: then change it 
     display_txt_2 ();  // display 2nd text: Then change it.
+    display_img_2 ();  // display an image of VSK (vegan starter kit) with text: then change it
+    display_footnote (); // display footnote (including text: "1 in 3 Australians..." and the button labelled: "GET YOUR STARTER..."
+}
+
+function footnote_ev_handler (e) {
+    globals.footnote.style.opacity=1;
+    globals.animated_img_2.classList.add("move-vsk-down");
 }
 
 function anim_txt_2_ev_handler (e) {
@@ -53,12 +61,17 @@ function display_txt_2 () {
     globals.animated_txt_2.classList.add("fade-in-txt"); //execute fade-in text animation
 }
 
-function display_img_2() {
+function display_img_2 () {
     globals.animated_img_2.style.visibility="visible";
     globals.animated_img_2.classList.add("fade-in-img2"); //execute fade-in img 2 animation
 }
 
+function display_footnote () {
+    globals.footnote.style.visibility="visible";
+    globals.footnote.classList.add("fade-in-footnote");
+}
+
 function display_video () {
-    globals.animated_video.style.visibility="visible";
-    globals.animated_video.classList.add("fade-in-video"); //add class 'fade-in-video' to video element, so that it is displayed on the screen 
+//    globals.animated_video.style.visibility="visible";
+//    globals.animated_video.classList.add("fade-in-video"); //add class 'fade-in-video' to video element, so that it is displayed on the screen 
 }
