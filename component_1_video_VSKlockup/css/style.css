@@ -77,7 +77,8 @@ html {
     width: 100%;  /*final max_widht should be 1650px */
     max-width: 1650px;
     margin: auto;
-    height: auto; 
+    height: auto;
+    overflow: hidden;
 }
 /* the .border class is applied only to the #content-wrapper object
  */
@@ -473,7 +474,6 @@ html {
 @-moz-keyframes moveVskDown {
     0% { top: 5.5vw; left: 27vw; }
   100% { top: 35vw; left: 35vw;  }
-}
 }
 @-webkit-keyframes moveVskDown {
     0% { top: 5.5vw; left: 27vw; }
