@@ -75,6 +75,7 @@ html {
 .content-attribs {
     display: block;
     width: 100%;  /*final max_widht should be 1650px */
+    max-width: 1650px;
     margin: auto;
     height: auto; 
 }
@@ -102,14 +103,32 @@ html {
  * After this point the	content	column should be centred on a white background.
  */
 @media (min-width: 1651px) { 
-    .content-attribs {
-        width: 1650px; 
-    }
     #animated-txt {
-	top: 264px;
-	font-size: 66px;
-	border-radius: 82.5px;
+	top: 264px !important;
+	font-size: 66px !important;
+	border-radius: 82px !important;
     }
+    #animated-txt-2 {
+        top: 380px !important; 
+	font-size: 66px !important;
+	border-radius: 82px !important;
+    }
+    .img2-content-attribs {
+	top: 90px !important;
+	left: 445px !important;
+    }
+    #footnote p { 
+	font-size: 41px !important;
+/*	top: 330px !important; */
+	top: 34px !important;
+	left: 33px !important;
+    }
+    #footnote button {
+        font-size: 21px !important;
+	margin-top: 46px !important;
+	margin-right: 66px !important;
+	border-radius: 16px !important;
+    }	
 }
 /*-------------------------------------------------
  * #poster-img attribute identifies an image, that
@@ -122,7 +141,7 @@ html {
  */
 #animated-txt {
     width: 54.2vw;
-    max-width: 894.3px;
+    max-width: 895px;
     position: absolute; 
     top: 16vw;
     left: 0;
@@ -235,13 +254,11 @@ html {
     background: -moz-linear-gradient(rgba(204, 204, 204, 0.5), rgba(0, 0, 0, 1), rgba(204, 204, 204, 0.5)); /* For Firefox */
     background: linear-gradient(rgba(204, 204, 204, 0), rgba(0, 0, 0, 1), rgba(204, 204, 204, 0)); /* Standard syntax */
 }
-
-
-
 .img2-content-attribs {
     visibility: hidden;
     position: absolute;
     width: 50%;
+    max-width: 825px;
     top: 5.5vw;
     left: 27vw;
     z-index: 1;
@@ -358,23 +375,26 @@ html {
  */
 #footnote {
     background-color: orange;
-    height: 10vw; 
+    height: 10vw;
+    max-height: 165px;
     position: relative;
 }
 #footnote p {
-    color: white;
+    color: black;
     position: relative;
     font-size: 2.5vw;
     width: 35vw;
+    max-width: 577px;
     top: 20%;
     left: 2%;
     text-align: center;
-    background-color: red;
 }
 #footnote button {
     display: block;
     width: 14vw;
+    max-width: 231px;
     height: 4.5vw;
+    max-height: 74px;
     float: right;
     float: bottom;
     font-size: 1.25vw;
